@@ -256,28 +256,25 @@ function getModelYears(inventory) {
  * in the same order as they appear in the original inventory.
 */
 function getOlderCars(inventory, maxYears) {
-  // let old = [];
-  // for (let i = 0; i < inventory.length; i++) {
-  //   if (inventory[i].car_year >= maxYears) {
-  //     return old.push(inventory[i].car_year);
+  let old = [];
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].car_year <= maxYears) {
+      old.push(inventory[i]);
+    }
+  }
+  return old;
+  // const get = inventory.sort(function (a, b) {
+  //   if (a.car_year < b.car_year) {
+  //     return -1;
   //   }
-  //   var numbers = [4, 2, 5, 1, 3];
-  // numbers.sort(function(a, b) {
-  //   return a - b;
-  // });
-  // }
-  const get = inventory.sort(function (a, b) {
-    if (a.car_year < b.car_year) {
-      return -1;
-    }
-    else if (a.car_year > b.car_year) {
-      return 1;
-    }
-    else {
-      return 0
-    }
-  })
-  return get
+  //   else if (a.car_year > b.car_year) {
+  //     return 1;
+  //   }
+  //   else {
+  //     return 0
+  //   }
+  // })
+  // return get
 }
 
 // const sorted = inventory.sort(function (a, b) {
@@ -308,14 +305,13 @@ function getOlderCars(inventory, maxYears) {
  * in the same order as they appear in the original inventory.
 */
 function getGermanCars(inventory) {
-  let german;
+  let german = [];
   for (let i = 0; i < inventory.length; i++) {
-    if (inventory[i].car_make === `Audi`, `Mercedes-Benz`, `Volkswagen`, `BMW`) {
-      german = inventory[i];
-      break
+    if (inventory[i].car_make == `Audi` || inventory[i].car_make == `Mercedes-Benz` || inventory[i].car_make == `Volkswagen` || inventory[i].car_make == `BMW`) {
+      german.push(inventory[i]);
     }
   }
-  return german
+  return german;
 }
 
 /**
