@@ -1,0 +1,25 @@
+var numbers = [4, 2, 5, 4];
+numbers.sort(function(a, b) {
+  return b - a;
+});
+console.log(numbers);
+
+i = 0, j = 1
+a = 4, b = 2 => b - a = -2 < 0 => a stays infront of b => newArray = [4, 2, 5, 4]
+
+i = 0, j = 2 
+a = 4, b = 5 => b - a = 1 > 0 => b stays infront of a => newArray = [5, 2, 4, 4]
+
+i = 0, j = 3
+a = 5, b = 4 => b - a = -1 < 0 => a stays infront of b => newArray = [5, 2, 4, 4]
+
+second loop
+i = 1, j = 2
+a = 2  b = 4 => b - a = 2 > 0 => b stays infront of a => newArray = [5, 4, 4, 2]
+
+i = 1  j = 3
+a = 4  b = 2 => b - a = -2 < 0 => a stays infront of b => newArray = [5, 4, 4, 2]
+
+third loop
+i = 2  j = 3
+a = 4  b = 2 => b - a = -2 < 0 => a stays infront of b => newArray = [5, 4, 4, 2]
