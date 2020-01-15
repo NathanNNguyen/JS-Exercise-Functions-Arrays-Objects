@@ -1,0 +1,28 @@
+  { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
+  { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
+  { id: 3, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
+
+  inventory.sort(function(a, b) {
+    //return a.car_model < b.car_model ? -1: 1;  
+    if (a.car_model.toLowerCase() < b.car_model.toLowerCase()){
+        return -1;
+    }
+    else if (a.car_model.toLowerCase() > b.car_model.toLowerCase()) {
+        return 1;
+    }
+    else{
+        return 0;
+    }
+    // if a is infront of b then a < b = true
+    // to sort ascending then a - b
+  });
+
+i = 0  j = 1
+a = navigator  b = miata => a.car_model > b.car_model => 1 > 0 => b stays infront of a => newArray = [Miata, Navigator, Defender]
+
+i = 0  j = 2
+a = miata      b = Defender => a.car_model > b.car_model => 1 > 0 => b stays infront of a => newArray = [Defender, Miata, Navigator]
+
+
+i = 1 j = 2
+a = Miata    b = Navigator => a.car_model < b.car_model => -1 < 0 => a stays infront of b => newArray = [Defender, Miata, Navigator]

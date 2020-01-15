@@ -1,0 +1,11 @@
+[ { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
+  { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
+  { id: 3, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },]
+
+
+=> [2009, 2001, 2010]
+
+inventory.map(car => car.car_year)
+// i = 0 => carId = 1 => car => car.car_year return 2009
+// i = 1 => carId = 2 => car => car.car_year return 2001
+// i = 2 => carId = 3 => car => car.car_year return 2010
